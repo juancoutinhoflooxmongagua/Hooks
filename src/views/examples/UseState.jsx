@@ -4,6 +4,7 @@ import SectionTitle from '../../components/layout/SectionTitle'
 
 const UseState = () => {
     const [count, setCount] = useState(0)
+    const [name, setName] = useState("oi")
 
     return (
         <div className="UseState">
@@ -22,6 +23,8 @@ const UseState = () => {
             </div>
             
             <SectionTitle title="tchau"/>
+    
+            <input type='text' className="input" value={name} onChange={e => setName(e.target.value)}></input>
         </div>
     )
 }
