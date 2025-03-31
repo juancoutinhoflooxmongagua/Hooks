@@ -1,8 +1,9 @@
 import React, { useState } from 'react'
 import PageTitle from '../../components/layout/PageTitle'
 import SectionTitle from '../../components/layout/SectionTitle'
-const UseState = (props) => {
-    const [count, setCound] = useState(0)
+
+const UseState = () => {
+    const [count, setCount] = useState(0)
 
     return (
         <div className="UseState">
@@ -11,7 +12,16 @@ const UseState = (props) => {
                 subtitle="Estado em componentes funcionais!"
             />
     
-            <SectionTitle></SectionTitle>
+            <SectionTitle title="oi"/>
+            <div className='center'>
+                <span className='center'>{count}</span>
+                <div>
+                    <button className="btn" onClick={() => setCount(count + 1)}>+1</button>
+                    <button className="btn" onClick={() => setCount(count - 1)}>-1</button>
+                </div>
+            </div>
+            
+            <SectionTitle title="tchau"/>
         </div>
     )
 }
