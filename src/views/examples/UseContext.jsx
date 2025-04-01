@@ -14,8 +14,8 @@ const UseContext = () => {
 
             <div>
                 <span>
-                    {context.text}
-                    {context.number}
+                    {context.state.text}
+                    {context.state.number}
                 </span>
             </div>
         </div>
