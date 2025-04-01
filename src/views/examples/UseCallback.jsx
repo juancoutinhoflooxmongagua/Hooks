@@ -22,4 +22,4 @@ const UseCallback = () => {
     )
 }
 
-export default UseCallback
+export default React.memo(UseCallback)
