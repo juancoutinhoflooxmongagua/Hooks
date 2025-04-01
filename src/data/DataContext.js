@@ -5,4 +5,5 @@ export const data = {
     text: 'api rodando'
 }
 
-export const DataContext = React.createContext(data)
+const DataContext = React.createContext(data)
+export default DataContext
