@@ -5,6 +5,13 @@ import DataContext from '../../data/DataContext'
 const UseContext = () => {
     const context = useContext(DataContext)
 
+    const AddNumber = (n) => {
+        context.setState(prevState => ({
+            ...prevState,       // Preserva o estado anterior
+            number: prevState.number + n  // Atualiza o número com o valor de n
+        }))
+    }
+
     return (
         <div className="UseContext">
             <PageTitle
@@ -17,6 +24,11 @@ const UseContext = () => {
                     {context.state.text}
                     {context.state.number}
                 </span>
+
+                <div>
+                    <button onClick={() => AddNumber(1)} className="btn">+1</button>
+                    <button onClick={() => AddNumber(-1)} className="btn">-1</button>
+                </div>
             </div>
         </div>
     )
